@@ -9,5 +9,5 @@ import hn.unah.demo.repositorios.TBL_PLANES_SUBSCRIPTORESRepository;
 public class TBL_PLANES_SUBSCRIPTORESService {
 
     @Autowired
-    private TBL_PLANES_SUBSCRIPTORESRepository TBL_PLANES_SUBSCRIPTORESRepository;
+    private TBL_PLANES_SUBSCRIPTORESRepository tblPlanesSubscriptoresrepository;
 }

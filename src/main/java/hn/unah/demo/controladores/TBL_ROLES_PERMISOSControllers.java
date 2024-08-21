@@ -4,15 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import hn.unah.demo.servicios.TBL_CONTENIDOServices;
+import hn.unah.demo.servicios.TBL_ROLES_PERMISOSService;
 
 @RestController
-@RequestMapping("/api/contenido")
+@RequestMapping("/api/roles/permiso")
 
-public class TBL_CONTENDIOControllers {
-        @Autowired
+public class TBL_ROLES_PERMISOSControllers {
 
-        private TBL_CONTENIDOServices tblContenido;
-
+    @Autowired 
+    private TBL_ROLES_PERMISOSService tbl_ROLES_PERMISOSService;
+    
 }
-

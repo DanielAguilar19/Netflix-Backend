@@ -1,7 +1,16 @@
 package hn.unah.demo.modelos;
 
+import java.time.LocalDateTime;
+
+import org.hibernate.annotations.CreationTimestamp;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Data;
 
 @Entity
 @Table(name = "TBL_CONTENIDO")
@@ -14,11 +23,11 @@ public class TBL_CONTENIDO {
     @Column(name = "ID_CONTENIDO")
     private Long idConteido ;
 
-    @Column(name "TITULO")
+    @Column(name = "TITULO")
     private String titulo;
 
     @Column(name = "DESCRIPCION")
-    private Stirng descripcion;
+    private String descripcion;
 
     @CreationTimestamp
     @Column(name = "FECHA_LANZAMIENTO")
@@ -27,9 +36,20 @@ public class TBL_CONTENIDO {
     @Column(name = "TIPO_CONTENIDO")
     private String tipoContenido;
 
-    @Column(name="DURACION")
-    private Doble duracion;
+    @Column(name= "DURACION")
+    private Double duracion;
 
+    @Column(name = "NUMERO_EPISODIOS")
+    private Integer numeroEpisodio;
+
+    @Column(name ="CATEGORIA_PRINCIPAL")
+    private Integer categoriaPrincipal;
+
+    @Column(name ="RESTRICCION_EDAD")
+    private Integer restriccionEdad;
+
+    @Column(name ="DESCRIPCION_RESTRICCION")
+    private String descripcionRestriccion;
 
     
      //no tiene
