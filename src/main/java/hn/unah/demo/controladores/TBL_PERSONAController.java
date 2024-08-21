@@ -4,14 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import hn.unah.demo.servicios.TBL_ACTORESService;
+import hn.unah.demo.servicios.TBL_PERSONAService;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api/persona")
 
-public class TBL_ACTORESController {
-
-    @Autowired
-    private TBL_ACTORESService tbl_ACTORESService;
+public class TBL_PERSONAController {
     
+    @Autowired
+    private TBL_PERSONAService tbl_PERSONAService;
 }

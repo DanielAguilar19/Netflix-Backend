@@ -4,14 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import hn.unah.demo.servicios.TBL_ACTORESService;
+import hn.unah.demo.servicios.TBL_PERFILEService;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api/perfiles")
 
-public class TBL_ACTORESController {
+public class TBL_PERFILEScontroller {
 
     @Autowired
-    private TBL_ACTORESService tbl_ACTORESService;
+
+    private TBL_PERFILEService tbl_PERFILEService;
     
 }

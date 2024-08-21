@@ -4,14 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import hn.unah.demo.servicios.TBL_ACTORESService;
+import hn.unah.demo.servicios.TBL_CONTENIDO_IDIOMAService;
 
 @RestController
-@RequestMapping
-
-public class TBL_ACTORESController {
+@RequestMapping("/api/contenido/idioma")
+public class TBL_CONTENIDO_IDIOMAControllers {
 
     @Autowired
-    private TBL_ACTORESService tbl_ACTORESService;
+
+    private TBL_CONTENIDO_IDIOMAService tbl_CONTENIDO_IDIOMAService;
+
     
 }
