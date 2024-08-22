@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import hn.unah.demo.servicios.TBL_EPISODIOService;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/api/episodio")
 
 public class TBL_EPISODIOSController {
 

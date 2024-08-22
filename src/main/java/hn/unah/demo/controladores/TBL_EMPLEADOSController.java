@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import hn.unah.demo.servicios.TBL_EMPLEADOSService;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/api/empleados")
 
 public class TBL_EMPLEADOSController {
 

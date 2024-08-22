@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import hn.unah.demo.servicios.TBL_ADMINISTRACION_PLATAFORMAService;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/api/administracion/plataforma")
 
 public class TBL_ADMINISTRACION_PLATAFORMAController {
 

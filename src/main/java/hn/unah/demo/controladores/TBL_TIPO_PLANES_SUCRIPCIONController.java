@@ -4,14 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import hn.unah.demo.servicios.TBL_EPISODIOS_TEMPORADAService;
+import hn.unah.demo.servicios.TBL_TIPO_PLANES_SUBCRIPCIONService;
 
 @RestController
-@RequestMapping("/api/episodio/temporada")
+@RequestMapping("/api/tipo/planes")
 
-public class TBL_EPISODIO_TEMPORADAController {
+public class TBL_TIPO_PLANES_SUCRIPCIONController {
 
     @Autowired
-    private TBL_EPISODIOS_TEMPORADAService tbl_EPISODIOS_TEMPORADAService;
+    private TBL_TIPO_PLANES_SUBCRIPCIONService tbl_TIPO_PLANES_SUBCRIPCIONService;
     
 }

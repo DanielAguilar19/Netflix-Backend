@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import hn.unah.demo.servicios.TBL_PAGOService;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/api/pago")
 
 public class TBL_PAGOController {
 
