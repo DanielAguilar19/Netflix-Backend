@@ -9,20 +9,20 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "")
+@Table(name = "TBL_IDIOMAS")
 @Data
 
 public class TBL_IDIOMAS {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_DESCRIPCION")
-    private Long idDescripcion;
+    @Column(name = "CODIGO_IDIOMA")
+    private Long codigoIdioma;
 
-    @Column(name = "TITULO_DESCRIPCION")
-    private String tituloDescripcion;
+    @Column(name = "NOMBRE_TIPO")
+    private String nombreTipo;
 
-    @Column(name = "DESCRIPCION")
-    private String descripcion;
+    
+    //no tiene
     
 }

@@ -9,21 +9,21 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "TBL_ROLLES")
+@Table(name = "TBL_ROLES")
 @Data
 public class TBL_ROLLES {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_ROLL")
+    @Column(name = "ID_ROL")
     private Long idRol;
 
-    @Column(name = "NOMBRE_ROLL")
+    @Column(name = "NOMBRE_ROL")
     private String nombreRoll;
 
-    @Column(name = "DESCRIPCION_ROLL")
+    @Column(name = "DESCRIPCION_ROL")
     private String descripcionRoll;
 
-    // relacion con la tabla de usuarios;
+    
 
 }

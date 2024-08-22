@@ -33,14 +33,7 @@ public class TBL_CONTENIDO {
     @Column(name = "FECHA_LANZAMIENTO")
     private LocalDateTime fechaLanzamiento;
 
-    @Column(name = "TIPO_CONTENIDO")
-    private String tipoContenido;
 
-    @Column(name= "DURACION")
-    private Double duracion;
-
-    @Column(name = "NUMERO_EPISODIOS")
-    private Integer numeroEpisodio;
 
     @Column(name ="CATEGORIA_PRINCIPAL")
     private Integer categoriaPrincipal;
@@ -52,7 +45,11 @@ public class TBL_CONTENIDO {
     private String descripcionRestriccion;
 
     
-     //no tiene
+     //relacion con tipo contenido 
+
+     //categoria
+
+     //codigo restricciones
 
     
 }

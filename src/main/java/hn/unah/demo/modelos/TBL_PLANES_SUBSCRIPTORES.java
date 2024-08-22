@@ -22,12 +22,20 @@ public class TBL_PLANES_SUBSCRIPTORES {
     @Column(name = "PRECIO")
     private Double precio;
 
+    @Column(name = "DESCRIPCION")
+    private String descripcion;
+
     @Column(name = "PERFIELES_DISPOSICIONES")
     private Integer perfilesDisposiciones;
 
     @Column(name = "MIEMBROS_EXTRAS")
     private Integer miembrosExtras;
 
+    @Column(name = "RESOLUCION")
+    private String resolucion;
+
     // realcion con la tabla usarios
+
+    //usuario planes
 
 }

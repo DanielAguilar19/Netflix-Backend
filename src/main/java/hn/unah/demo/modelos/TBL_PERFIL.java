@@ -1,10 +1,6 @@
 package hn.unah.demo.modelos;
 
-import java.time.LocalDateTime;
 
-import org.hibernate.annotations.CreationTimestamp;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,26 +11,22 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "")
+@Table(name = "TBL_PERFILES")
 @Data
 
 public class TBL_PERFIL {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_DIRECTOR")
-    private Long idDirector;
+    @Column(name = "CODIGO_PERFIL")
+    private Long codigoPerfil;
 
-    @Column(name = "NOMBRE")
-    private String nombre;
+    @Column(name = "NOMBRE_PERFIL")
+    private String nombrePerfil;
 
-    @CreationTimestamp
-    @Column(name = "FECHA_NACIMIENTO")
-    @JsonProperty("fechaNacimiento")
-    private LocalDateTime fechaNacimiento;
 
-    @Column(name = "BIOGRAFIA")
-    private String biografia;
+    @Column(name = "REPRODUCCION_AUTOMATICA")
+    private Integer reproduccionAutomatica;
 
 
     //no tiene relaciones

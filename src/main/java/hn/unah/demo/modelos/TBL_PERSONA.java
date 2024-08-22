@@ -1,5 +1,7 @@
 package hn.unah.demo.modelos;
 
+
+
 import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -15,28 +17,44 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "")
+@Table(name = "TBL_PERSONAS")
 @Data
 
 public class TBL_PERSONA {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_DIRECTOR")
-    private Long idDirector;
+    @Column(name = "CODIGO_PERSONA")
+    private Long codigoPersona;
 
-    @Column(name = "NOMBRE")
-    private String nombre;
+     @Column(name = "P_NOMBRE")
+    private String primerNombre;
+
+    @Column(name = "S_NOMBRE")
+    private String segundoNombre;
+
+    @Column(name = "P_APELLIDO")
+    private String primerApellido;
+
+    @Column(name = "S_APELLIDO")
+    private String segundoApellido;
+
+    @Column(name = "CORREO_ELECTRONICO")
+    private String correo;
+
+    @Column(name = "TELEFONO")
+    private String telefono;
 
     @CreationTimestamp
-    @Column(name = "FECHA_NACIMIENTO")
-    @JsonProperty("fechaNacimiento")
-    private LocalDateTime fechaNacimiento;
+    @Column(name = "FECHA_REGISTRO")
+    @JsonProperty("fecharegistro")
+    private LocalDateTime fechaRegistro;
 
-    @Column(name = "BIOGRAFIA")
-    private String biografia;
+   
+
+    
 
 
-    //no tiene relaciones
+    //ubicacion
     
 }

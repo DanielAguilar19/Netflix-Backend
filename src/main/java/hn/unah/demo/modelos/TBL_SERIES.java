@@ -9,19 +9,21 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "")
+@Table(name = "TBL_SERIES")
 @Data
 
 public class TBL_SERIES {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_GENERO")
-    private Long idGenero;
+    @Column(name = "CODIGO_SERIE")
+    private Long codigoSerie;
 
-    @Column(name = "NOMBRE_GENERO")
-    private String nombreGenero;
+    @Column(name = "NUMERO_TEMPORADAS")
+    private Integer numeroTemporada;
 
-    // no tiene relacion
+    
+
+    // contenido
     
 }

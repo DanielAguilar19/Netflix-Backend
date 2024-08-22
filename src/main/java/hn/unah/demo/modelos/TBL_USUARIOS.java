@@ -47,8 +47,6 @@ public class TBL_USUARIOS {
     @JsonProperty("fecharegistro")
     private LocalDateTime fechaRegistro;
 
-    // relacion con la tabal de roles
-    // relacion con la tabla de pan
-    // relacion con la tabla de localizacion
+    
 
 }

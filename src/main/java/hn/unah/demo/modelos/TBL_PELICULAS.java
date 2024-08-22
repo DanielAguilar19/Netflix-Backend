@@ -9,21 +9,19 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "TBL_SUBCATEGORIAS")
+@Table(name = "TBL_PELICULAS")
 @Data
 
-public class TBL_SUBCATEGORIAS {
+public class TBL_PELICULAS {
 
-    @Id
+     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_SUBCATEGORIA")
-    private Long idSubcategorias;
+    @Column(name = "CODIGO_PELICULA")
+    private Long codigoPelicula;
 
-    @Column(name = "NOMBRE_SUBCATEGORIA")
-    private String nombreSubcategorias;
+    @Column(name = "DURACION")
+    private String duracion;
 
-
-    //relacion de categorias con subcategorias 
-
+    //contenido
     
 }
