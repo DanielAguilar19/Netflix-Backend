@@ -1,10 +1,6 @@
 package hn.unah.demo.modelos;
 
-import java.time.LocalDateTime;
 
-import org.hibernate.annotations.CreationTimestamp;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,7 +11,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "")
+@Table(name = "TBL_CONTENIDO_PAISES")
 @Data
 
 public class TBL_CONTENIDO_PAISES {

@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "TBL_EPISODIO_POR_TEMPORADA")
+@Table(name = "TBL_EPISODIOS_POR_TEMPORADAS")
 @Data
 
 public class TBL_EPISODIOS_POR_TEMPORADA {

@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "TBL_HISTORIAL_VISUALIZACIONES")
+@Table(name = "TBL_HISTORIAL_VISUALIZACION")
 @Data
 
 public class TBL_HISTORIAL_VISUALIZACIONES {
