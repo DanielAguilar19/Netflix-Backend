@@ -14,16 +14,21 @@ import lombok.Data;
 
 public class TBL_PELICULAS_X_IDIOMAS_URL {
 
-      @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "CODIGO_REGISTRO_PI")
-    private Long codigoRegistro;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "CODIGO_REGISTRO_PI")
+  private Long codigoRegistro;
 
-    @Column(name = "URL_VIDEO")
-    private String urlVideo;
+  @Column(name = "URL_VIDEO")
+  private String urlVideo;
 
-    //idioma
+  // idioma
+  @Column(name = "CODIGO_IDIOMA")
+  private Long codigoIdioma;
 
-    //pelicula
-    
+  @Column(name = "CODIGO_PELICULA")
+  private long codigoPelicula;
+
+  // pelicula
+
 }

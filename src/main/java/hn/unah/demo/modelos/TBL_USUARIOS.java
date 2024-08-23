@@ -1,11 +1,6 @@
 package hn.unah.demo.modelos;
 
-import java.time.LocalDateTime;
 import java.util.List;
-
-import org.hibernate.annotations.CreationTimestamp;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -17,7 +12,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -45,7 +39,7 @@ public class TBL_USUARIOS {
     ////////////////////////////////////////////////
     //// relacion de muchoa a uno con la tabla de planes
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "TBL_USUARIOS_PLANES", joinColumns = @JoinColumn(name = "ID_USUARIOS", referencedColumnName = "ID_USUARIO"), inverseJoinColumns = @JoinColumn(name = "ID_PLAN", referencedColumnName = "ID_PLAN"))
+    @JoinTable(name = "TBL_HISTORIAL_USUARIOS_X_PLAN", joinColumns = @JoinColumn(name = "CODIGO_USUARIOS", referencedColumnName = "CODIGO_USUARIO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_PLAN", referencedColumnName = "CODIGO_PLAN"))
     private List<TBL_TIPO_PLANES_SUBSCRIPCION> listaPlanesSubscripcion;
 
     /********************************************/
@@ -57,7 +51,5 @@ public class TBL_USUARIOS {
     // relacion de uno amuchos con la talba perfiles
     @OneToMany(mappedBy = "usuarios", cascade = CascadeType.ALL)
     private List<TBL_PERFILES> listaPerfiles;
-
-    
 
 }

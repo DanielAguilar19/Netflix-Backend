@@ -37,13 +37,13 @@ public class TBL_IDIOMAS {
     // relacion de muchos a muchos con la tabal contenido (tabla intermedia
     // contenido_idioma)
     @JsonIgnore
-    @ManyToMany(mappedBy = "listaIdomasPorContenido", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "listaContenidoPorIdioma", cascade = CascadeType.ALL)
     private List<TBL_CONTENIDO> listaContenido;
 
     /****************************************************/
     // relacion de mucho a muchos con peliculas (tabla intermedia
     // pelicilas_idiomas_url)
-    @ManyToMany(mappedBy = "listaIdiomas", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "listaPeliculasPorIdiomas", cascade = CascadeType.ALL)
     private List<TBL_PELICULAS> listaPeliculas;
 
     /**************************************************/

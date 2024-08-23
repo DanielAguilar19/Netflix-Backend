@@ -3,7 +3,6 @@ package hn.unah.demo.modelos;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -12,15 +11,14 @@ import lombok.Data;
 @Data
 public class TBL_CONTENIDO_X_CATEGORIAS {
     @Id
-    @Column(name = "id_subcategoria")
-    Long idSubcategoria;
+    @Column(name = "CODIGO_CONTENIDO_X_CATEGORIAS")
+    private Long codigoContenidoXcategorias;
     // relacion contenido
 
-    @ManyToOne()
-    TBL_CATEGORIAS categoria;
+    @Column(name = "CODIGO_CATEGORIA") // FK
+    private long categoria;
 
-    @ManyToOne()
-    TBL_CONTENIDO contenido;
-    // relacion subcategoria
+    @Column(name = "CODIGO_CONTENIDO") // FK
+    private long contenido;
 
 }

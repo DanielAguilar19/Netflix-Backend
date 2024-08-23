@@ -40,6 +40,6 @@ public class TBL_PELICULAS {
     /////////////////////////////////////////////////// peliculas_idioma_url)
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "TBL_PELICULAS_X_IDIOMAS_URL", joinColumns = @JoinColumn(name = "CODIGO_PELICULA", referencedColumnName = "CODIGO_PELICULA"), inverseJoinColumns = @JoinColumn(name = "CODIGO_IDIOMA", referencedColumnName = "CODIGO_IDIOMA"))
-    private List<TBL_IDIOMAS> listaIdiomas;
+    private List<TBL_IDIOMAS> listaPeliculasPorIdiomas;
 
 }

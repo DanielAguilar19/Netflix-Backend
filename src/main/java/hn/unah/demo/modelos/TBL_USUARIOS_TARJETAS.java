@@ -43,12 +43,12 @@ public class TBL_USUARIOS_TARJETAS {
     ////////////////////////////////////////////////////
     // relacion de muchos a uno con la tabla de usuarios
     @ManyToOne
-    @JoinColumn(name = "ID_USUARIO", referencedColumnName = "ID_USUARIO")
+    @JoinColumn(name = "CODIGO_USUARIO", referencedColumnName = "CODIGO_USUARIO")
     private TBL_USUARIOS usuario;
 
     /*************************************************/
     // relcaion de uno a muchos con la tabla de historial_pagos
     @OneToMany(mappedBy = "codigoRegistroTarjeta", cascade = CascadeType.ALL)
-    private List<TBL_HISTORIAL_USUARIOS_X_PLAN> listaHistorialPagos;
+    private List<TBL_HISTORIAL_PAGOS> listaHistorialPagos;
 
 }

@@ -32,11 +32,12 @@ public class TBL_HISTORIAL_VISUALIZACIONES {
 
     @Column(name = "PROGRESO")
     private String progreso;
-    
 
     /**********************************************/
-    private Long ID_CONTENIDO;
+    @Column(name = "CODIGO_CONTENIDO")
+    private Long codigoContenido; // FK
 
-    private Long CODIGO_PERFIL;
+    @Column(name = "CODIGO_PERFIL")
+    private Long codigoPerfil; // FK
 
 }

@@ -48,7 +48,7 @@ public class TBL_CONTENIDO {
     @Column(name = "RESTRICCION_EDAD")
     private Integer restriccionEdad;
 
-    @Column(name = "DESCRIPCION_RESTRICCION") //cambiar de CLOB a STRING
+    @Column(name = "DESCRIPCION_RESTRICCION") // cambiar de CLOB a STRING
     private String descripcionRestriccion;
 
     /***********************************************/
@@ -65,7 +65,7 @@ public class TBL_CONTENIDO {
     ////////////////////////////////////////////////
     // relacion de muchos a muchos con la tabla de contenido_idioma
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "TBL_CONTENIDO_IDIOMA", joinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_IDIOMA", referencedColumnName = "CODIGO_IDIOMA"))
+    @JoinTable(name = "TBL_CONTENIDO_X_IDIOMA", joinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_IDIOMA", referencedColumnName = "CODIGO_IDIOMA"))
     private List<TBL_IDIOMAS> listaContenidoPorIdioma;
 
     ///////////////////////////////////////////////
@@ -78,7 +78,7 @@ public class TBL_CONTENIDO {
     // relacion de muchos a muchos con tbl perfiles (tbl intermedia
     // historial_vizualizacion)
     @JsonIgnore
-    @ManyToMany(mappedBy = " istaContenidoPorPerfil", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = " listaContenidoPorPerfil", cascade = CascadeType.ALL)
     private List<TBL_PERFILES> listaPerfiles;
 
     ////////////////////////////////////////////////
@@ -108,7 +108,7 @@ public class TBL_CONTENIDO {
     ///////////////////////////////////////////////
     // relacion de muchos a muchos con tbl Actores
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "TBL_CONTENIDO_ACTORES", joinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_ACTOR", referencedColumnName = "CODIGO_ACTOR"))
+    @JoinTable(name = "TBL_CONTENIDO_X_ACTORES", joinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_ACTOR", referencedColumnName = "CODIGO_ACTOR"))
     private List<TBL_ACTORES> listaActores;
 
     ///////////////////////////////////////////////

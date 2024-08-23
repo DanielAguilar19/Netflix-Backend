@@ -37,14 +37,10 @@ public class TBL_HISTORIAL_USUARIOS_X_PLAN {
     @JsonProperty("fechaVencimiento")
     private LocalDateTime fechaVencimiento;
 
-
-    
-
-    /////////////////////////////////////////////////////
-    // relaicon de uno a uno con la tabla de planes_usuarios
-    @OneToOne
-    @JoinColumn(name = "CODIGO_REGISTRO") //revisar la tabla
-    private TBL_HISTORIAL_USUARIOS_X_PLAN  usuarioPlanesNumRegistro;
+    /***********************************************/
+    // relacion de uno a uno con historil_pagos
+    @OneToOne(mappedBy = "usuarioPlanesNumRegistro")
+    private TBL_HISTORIAL_PAGOS historialPagos;
 
     ////////////////////////////////////////////////////
     // relaicion de muchos a uno con ta tabla tipo_pago
@@ -52,10 +48,16 @@ public class TBL_HISTORIAL_USUARIOS_X_PLAN {
     @JoinColumn(name = "CODIGO_TIPO_PAGO")
     private TBL_TIPO_PAGO codigoTipoPago;
 
-    ////////////////////////////////////////////////////
-    // relacion de muchos a uno con la tabla de usuarios_tarjetas
+    @Column(name = "CODIGO_USUARIO") // FK
+    private long codigoUsuario;
+
+    @Column(name = "CODIGO_PLAN") // FK
+    private long codigoPlan;
+
+    /////////////////////////////////////////////////
+    // relacion de muchos a uno con la tbl tipo_estado
     @ManyToOne
-    @JoinColumn(name = "CODIGO_REGISTRO_TARJETA", referencedColumnName = "CODIGO_REGISTRO_TARJETA")
-    private TBL_USUARIOS_TARJETAS codigoRegistroTarjeta;
+    @JoinColumn(name = "CODIGO_ESTADO", referencedColumnName = "CODIGO_ESTADO")
+    private TBL_TIPO_ESTADO estado;
 
 }

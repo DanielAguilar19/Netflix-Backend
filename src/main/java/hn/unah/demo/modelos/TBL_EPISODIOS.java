@@ -21,11 +21,14 @@ public class TBL_EPISODIOS {
     @Column(name = "CODIGO_EPISODIO")
     private Integer CodigoEpisodio;
 
-    @Column(name = "DURACION")
-    private Integer duracion;
-
     @Column(name = "TITULO_EPISODIO")
     private String titulo;
+
+    @Column(name = "DESCRIPCION")
+    private String descripcion;
+
+    @Column(name = "DURACION")
+    private Integer duracion;
 
     @Column(name = "FECHA_LANZAMIENTO")
     private LocalDate fechaLanzamiento;
