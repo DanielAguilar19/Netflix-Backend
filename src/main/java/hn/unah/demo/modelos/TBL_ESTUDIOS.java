@@ -36,7 +36,7 @@ public class TBL_ESTUDIOS {
     // relacion de muchos a muchos con tbl contenido (tbl intermedia
     // contenido_estudios)
     @ManyToMany
-    @JoinTable(name = "CONTENIDO_ESTUDIOS", joinColumns = @JoinColumn(name = "CODIGO_ESTUDIO", referencedColumnName = "CODIGO_ESTUDIO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"))
+    @JoinTable(name = "TBL_CONTENIDOS_X_ESTUDIO", joinColumns = @JoinColumn(name = "CODIGO_ESTUDIO", referencedColumnName = "CODIGO_ESTUDIO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"))
     private List<TBL_CONTENIDO> listaContenidoPorEstudio;
 
 }

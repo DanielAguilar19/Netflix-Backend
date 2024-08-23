@@ -24,13 +24,13 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "TBL_SYSTEM_USUARIOS")
+@Table(name = "TBL_USUARIOS")
 @Data
 public class TBL_USUARIOS {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_USUARIO")
+    @Column(name = "CODIGO_USUARIO")
     private Long idUsuario;
 
     @Column(name = "CONTRASENIA")
@@ -46,7 +46,7 @@ public class TBL_USUARIOS {
     //// relacion de muchoa a uno con la tabla de planes
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "TBL_USUARIOS_PLANES", joinColumns = @JoinColumn(name = "ID_USUARIOS", referencedColumnName = "ID_USUARIO"), inverseJoinColumns = @JoinColumn(name = "ID_PLAN", referencedColumnName = "ID_PLAN"))
-    private List<TBL_PLANES_SUBSCRIPCION> listaPlanesSubscripcion;
+    private List<TBL_TIPO_PLANES_SUBSCRIPCION> listaPlanesSubscripcion;
 
     /********************************************/
     // relacion de uno a muchos con Tarjestas_usuario

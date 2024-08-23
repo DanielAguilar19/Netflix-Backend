@@ -60,7 +60,7 @@ public class TBL_PERSONAS {
     /****************************************************/
     // relacion de muchos a uno con la tabla ubicaciones
     @ManyToOne
-    @JoinColumn(name = "ID_UBICACION", referencedColumnName = "ID_UBICACION")
+    @JoinColumn(name = "CODIGO_UBICACION", referencedColumnName = "CODIGO_UBICACION")
     private TBL_UBICACIONES ubicacion;
 
     /****************************************************/

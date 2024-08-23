@@ -47,7 +47,7 @@ public class TBL_PERFILES {
     ////////////////////////////////////////////////
     // relacion de muhcos a uno con la tabal usuarios
     @ManyToOne
-    @JoinColumn(name = "ID_USUARIO", referencedColumnName = "ID_USUARIO")
+    @JoinColumn(name = "CODIGO_USUARIO", referencedColumnName = "CODIGO_USUARIO")
     private TBL_USUARIOS usuarios;
 
     ///////////////////////////////////////////////
@@ -60,7 +60,7 @@ public class TBL_PERFILES {
     // relacion de muchos a muchos con la tabla contenido(tabla intermedia
     // tbl_historial_vizualizaciones)
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "TBL_HISTORIAL_VISUALIZACIONES", joinColumns = @JoinColumn(name = "CODIGO_PERFIL", referencedColumnName = "CODIGO_PERFIL"), inverseJoinColumns = @JoinColumn(name = "ID_CONTENIDO", referencedColumnName = "IDCONTENIDO"))
+    @JoinTable(name = "TBL_HISTORIAL_VISUALIZACIONES", joinColumns = @JoinColumn(name = "CODIGO_PERFIL", referencedColumnName = "CODIGO_PERFIL"), inverseJoinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"))
     private List<TBL_CONTENIDO> listaContenido;
 
     ///////////////////////////////////////////////

@@ -40,7 +40,7 @@ public class TBL_ADMINISTRADORES_PLATAFORMA {
     ///////////////////////////////////////////////////////// adminsitrar ,dentro de
     ///////////////////////////////////////////////////////// la platafroma)
     @ManyToOne
-    @JoinColumn(name = "CODIGO_ROLL", referencedColumnName = "CODIGO_ROLL")
-    private TBL_ROLLES rolAdministrador;
+    @JoinColumn(name = "CODIGO_ROL", referencedColumnName = "CODIGO_ROL")
+    private TBL_ROLES rolAdministrador;
 
 }

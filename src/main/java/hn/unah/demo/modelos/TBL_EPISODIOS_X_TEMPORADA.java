@@ -11,11 +11,12 @@ import lombok.Data;
 @Data
 public class TBL_EPISODIOS_X_TEMPORADA {
   @Id
-  @Column(name = "CODIGO_EPISODIO_TEMPORADA")
-  private Integer codigoEpisodioTemporada;
+  @Column(name = "CODIGO_REGISTRO_ET")
+  private Integer codigoRegistroET;
 
-  @Column(name = "NUMERO_TEMPORADA") // controla el orden cronologico de cada episodio por tem serie
-  private Integer numeroTemporada;
+  //NO SALE 
+  //@Column(name = "NUMERO_TEMPORADA") // controla el orden cronologico de cada episodio por tem serie
+  //private Integer numeroTemporada;
 
   @Column(name = "CODIGO_SERIE") // Fk
   private long codigoSerie;

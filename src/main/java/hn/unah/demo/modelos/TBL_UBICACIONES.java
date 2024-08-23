@@ -26,8 +26,11 @@ public class TBL_UBICACIONES {
     @Column(name = "NOMBRE_LUGAR")
     private String nombreLuagar;
 
-    @Column(name = "Tipo")
+    @Column(name = "TIPO")
     private String tipo;
+
+
+    //codigo lugar padre
 
     // relacion con la misma tabla (recusrsiva )
     /*****************************************************/

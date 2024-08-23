@@ -14,15 +14,17 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "")
+@Table(name = "TBL_EPISODIOS")
 @Data
 public class TBL_EPISODIOS {
     @Id
     @Column(name = "CODIGO_EPISODIO")
     private Integer CodigoEpisodio;
 
+    @Column(name = "DURACION")
     private Integer duracion;
 
+    @Column(name = "TITULO_EPISODIO")
     private String titulo;
 
     @Column(name = "FECHA_LANZAMIENTO")
@@ -35,7 +37,7 @@ public class TBL_EPISODIOS {
     // relacion de muchos a mcuhos con la tabla idios (tbl intermedia
     //////////////////////////////////////// episodios_idiomas)
     @ManyToMany
-    @JoinTable(name = "TBL_EPISODIOS_IDIOMAS_URL", joinColumns = @JoinColumn(name = "CODIGO_EPISODIO", referencedColumnName = "CODIGO_EPISODIO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_IDIOMA", referencedColumnName = "CODIGO_IDIOMA"))
+    @JoinTable(name = "TBL_EPISODIOS_X_IDIOMAS_URL", joinColumns = @JoinColumn(name = "CODIGO_EPISODIO", referencedColumnName = "CODIGO_EPISODIO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_IDIOMA", referencedColumnName = "CODIGO_IDIOMA"))
     private List<TBL_IDIOMAS> listasIdiomasPorEpisodios;
 
     // falta relacion con tabla EPISODIOS_IDIOMAS_URL

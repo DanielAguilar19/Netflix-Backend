@@ -33,6 +33,6 @@ public class TBL_PERMISOS {
 
     @JsonIgnore
     @ManyToMany(mappedBy = "listaPermisos", cascade = CascadeType.ALL)
-    private List<TBL_ROLLES> listaRoles; // son los roles a lo que esta permos estan asociados
+    private List<TBL_ROLES> listaRoles; // son los roles a lo que esta permos estan asociados
 
 }

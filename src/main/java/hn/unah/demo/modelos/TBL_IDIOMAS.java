@@ -23,7 +23,6 @@ public class TBL_IDIOMAS {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CODIGO_IDIOMA")
-<<<<<<< HEAD
     private Long idDescripcion;
 
     @Column(name = "NOMBRE_TIPO")
@@ -52,14 +51,4 @@ public class TBL_IDIOMAS {
     // idiomas)
     @ManyToMany(mappedBy = "listasIdiomasPorEpisodios", cascade = CascadeType.ALL)
     private List<TBL_EPISODIOS> listaEpisodios;
-=======
-    private Long codigoIdioma;
-
-    @Column(name = "NOMBRE_TIPO")
-    private String nombreTipo;
-
-    
-    //no tiene
-    
->>>>>>> c887a3b99722b504a7c804ac5504fc2f91c047ce
 }

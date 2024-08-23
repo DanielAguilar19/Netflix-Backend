@@ -49,6 +49,6 @@ public class TBL_USUARIOS_TARJETAS {
     /*************************************************/
     // relcaion de uno a muchos con la tabla de historial_pagos
     @OneToMany(mappedBy = "codigoRegistroTarjeta", cascade = CascadeType.ALL)
-    private List<TBL_HISTORIAL_PAGOS> listaHistorialPagos;
+    private List<TBL_HISTORIAL_USUARIOS_X_PLAN> listaHistorialPagos;
 
 }

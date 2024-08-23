@@ -15,38 +15,28 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "TBL_HISTORIAL_VISUALIZACION")
+@Table(name = "TBL_HISTORIAL_VISUALIZACIONES")
 @Data
 
 public class TBL_HISTORIAL_VISUALIZACIONES {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_HISTORIAL")
-    private Long idHistorial;
+    @Column(name = "CODIGO_HISTORIAL")
+    private Long codigoHistorial;
 
     @CreationTimestamp
     @Column(name = "FECHA_VISUALIZACION")
     @JsonProperty("fechaVisualizacion")
     private LocalDateTime fechaVisulizacion;
 
-<<<<<<< HEAD
     @Column(name = "PROGRESO")
     private String progreso;
+    
 
     /**********************************************/
     private Long ID_CONTENIDO;
 
     private Long CODIGO_PERFIL;
 
-=======
-    @Column(name= "PROGRESO")
-    private Double progreso;
-
-    //perfiles
-
-
-    //contenido
-    
->>>>>>> c887a3b99722b504a7c804ac5504fc2f91c047ce
 }
