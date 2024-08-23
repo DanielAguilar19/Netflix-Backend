@@ -27,6 +27,9 @@ public class TBL_USUARIOS {
     @Column(name = "CODIGO_USUARIO")
     private Long idUsuario;
 
+    @Column(name = "CORREO")
+    private String correo;
+
     @Column(name = "CONTRASENIA")
     private String contrasenia;
 

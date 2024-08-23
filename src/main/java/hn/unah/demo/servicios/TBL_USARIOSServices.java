@@ -29,4 +29,12 @@ public class TBL_USARIOSServices {
         // TBL_USUARIOS objUsuario = this.tblusuar
         return null;
     }
+
+    public boolean validarUsuario(String correo, String contrasenia){
+        TBL_USUARIOS usuarioLoguear = this.tblusuariorepository.validarContraseniaCorreo(correo, contrasenia);
+        if (usuarioLoguear != null) {
+            return true;
+        }
+            return false;
+    }       
 }
