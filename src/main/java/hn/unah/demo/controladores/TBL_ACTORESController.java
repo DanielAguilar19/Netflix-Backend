@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import hn.unah.demo.servicios.TBL_ACTORESService;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api/actor")
 
 public class TBL_ACTORESController {
 

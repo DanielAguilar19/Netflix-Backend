@@ -17,21 +17,26 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "TBL_ROLLES")
+@Table(name = "TBL_ROLES")
 @Data
 public class TBL_ROLLES {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+<<<<<<< HEAD
     @Column(name = "CODIGO_ROLL")
+=======
+    @Column(name = "ID_ROL")
+>>>>>>> c887a3b99722b504a7c804ac5504fc2f91c047ce
     private Long idRol;
 
-    @Column(name = "NOMBRE_ROLL")
+    @Column(name = "NOMBRE_ROL")
     private String nombreRoll;
 
-    @Column(name = "DESCRIPCION_ROLL")
+    @Column(name = "DESCRIPCION_ROL")
     private String descripcionRoll;
 
+<<<<<<< HEAD
     /******************************************/
     // relacion con la tabla de administradores_platafroma
     @OneToMany(mappedBy = "rolAdministrador", cascade = CascadeType.ALL)
@@ -43,5 +48,8 @@ public class TBL_ROLLES {
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "TBL_ROLES_PERMISOS", joinColumns = @JoinColumn(name = "CODIGO_ROLL", referencedColumnName = "CODIGO_ROLL"), inverseJoinColumns = @JoinColumn(name = "CODIGO_PERMISO", referencedColumnName = "CODIGO_PERMISO"))
     private List<TBL_PERMISOS> listaPermisos;
+=======
+    
+>>>>>>> c887a3b99722b504a7c804ac5504fc2f91c047ce
 
 }

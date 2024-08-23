@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import hn.unah.demo.servicios.TBL_RESTRICCIONEService;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/api/restricciones")
 
 public class TBL_RESTRICCIONESController {
 

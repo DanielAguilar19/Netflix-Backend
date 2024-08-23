@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "")
+@Table(name = "TBL_SERIES")
 @Data
 
 public class TBL_SERIES {
@@ -25,6 +25,7 @@ public class TBL_SERIES {
     @Column(name = "CODIGO_SERIE")
     private Long codigoSerie;
 
+<<<<<<< HEAD
     // @Column(name = "NOMBRE_GENERO")
     // private String nombreGenero;
 
@@ -42,4 +43,13 @@ public class TBL_SERIES {
     @ManyToOne
     @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO")
     private TBL_CONTENIDO contenido;
+=======
+    @Column(name = "NUMERO_TEMPORADAS")
+    private Integer numeroTemporada;
+
+    
+
+    // contenido
+    
+>>>>>>> c887a3b99722b504a7c804ac5504fc2f91c047ce
 }

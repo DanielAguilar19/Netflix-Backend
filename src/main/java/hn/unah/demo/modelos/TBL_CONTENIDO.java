@@ -45,12 +45,22 @@ public class TBL_CONTENIDO {
     @Column(name = "FECHA_LANZAMIENTO")
     private LocalDateTime fechaLanzamiento;
 
+<<<<<<< HEAD
     @Column(name = "RESTRICCION_EDAD")
+=======
+
+
+    @Column(name ="CATEGORIA_PRINCIPAL")
+    private Integer categoriaPrincipal;
+
+    @Column(name ="RESTRICCION_EDAD")
+>>>>>>> c887a3b99722b504a7c804ac5504fc2f91c047ce
     private Integer restriccionEdad;
 
     @Column(name = "DESCRIPCION_RESTRICCION")
     private String descripcionRestriccion;
 
+<<<<<<< HEAD
     /***********************************************/
     // relacion de uno a muchos con la tabla series
     @OneToMany(mappedBy = "contenido", cascade = CascadeType.ALL)
@@ -116,5 +126,13 @@ public class TBL_CONTENIDO {
     @ManyToOne
     @JoinColumn(name = "CODIGO_RESTRICCION", referencedColumnName = "CODIGO_RESTRICCION")
     private TBL_RESTRICCIONES restricciones;
+=======
+    
+     //relacion con tipo contenido 
+
+     //categoria
+
+     //codigo restricciones
+>>>>>>> c887a3b99722b504a7c804ac5504fc2f91c047ce
 
 }

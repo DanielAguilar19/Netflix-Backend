@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import hn.unah.demo.servicios.TBL_CARGOService;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/api/cargo")
 
 public class TBL_CARGOController {
 

@@ -58,8 +58,6 @@ public class TBL_USUARIOS {
     @OneToMany(mappedBy = "usuarios", cascade = CascadeType.ALL)
     private List<TBL_PERFILES> listaPerfiles;
 
-    // relacion con la tabal de roles
-    // relacion con la tabla de pan
-    // relacion con la tabla de localizacion
+    
 
 }

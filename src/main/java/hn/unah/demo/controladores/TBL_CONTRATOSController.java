@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import hn.unah.demo.servicios.TBL_CONTRATOService;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/api/contratos")
 
 public class TBL_CONTRATOSController {
 

@@ -7,9 +7,16 @@ import org.hibernate.annotations.CreationTimestamp;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Table(name = "TBL_HISTORIAL_VISUALIZACION")
+@Data
 
 public class TBL_HISTORIAL_VISUALIZACIONES {
 
@@ -23,6 +30,7 @@ public class TBL_HISTORIAL_VISUALIZACIONES {
     @JsonProperty("fechaVisualizacion")
     private LocalDateTime fechaVisulizacion;
 
+<<<<<<< HEAD
     @Column(name = "PROGRESO")
     private String progreso;
 
@@ -31,4 +39,14 @@ public class TBL_HISTORIAL_VISUALIZACIONES {
 
     private Long CODIGO_PERFIL;
 
+=======
+    @Column(name= "PROGRESO")
+    private Double progreso;
+
+    //perfiles
+
+
+    //contenido
+    
+>>>>>>> c887a3b99722b504a7c804ac5504fc2f91c047ce
 }

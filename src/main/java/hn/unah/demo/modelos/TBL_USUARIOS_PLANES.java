@@ -6,21 +6,28 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+<<<<<<< HEAD
 import jakarta.persistence.CascadeType;
+=======
+>>>>>>> c887a3b99722b504a7c804ac5504fc2f91c047ce
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+<<<<<<< HEAD
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
+=======
+>>>>>>> c887a3b99722b504a7c804ac5504fc2f91c047ce
 import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
 @Table(name = "TBL_USUARIOS_PLANES")
 @Data
+<<<<<<< HEAD
 public class TBL_USUARIOS_PLANES {
 
     @Id
@@ -31,10 +38,24 @@ public class TBL_USUARIOS_PLANES {
     @CreationTimestamp
     @Column(name = "FECHA_ADQUISICION")
     @JsonProperty("fechaadquisicion")
+=======
+
+public class TBL_USUARIOS_PLANES {
+
+     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "CODIGO_REGRISTRO")
+    private Long codigoRegistro;
+
+    @CreationTimestamp
+    @Column(name = "FECHA_ADQUISICION")
+    @JsonProperty("fechaAdquisicion")
+>>>>>>> c887a3b99722b504a7c804ac5504fc2f91c047ce
     private LocalDateTime fechaAdquisicion;
 
     @CreationTimestamp
     @Column(name = "FECHA_VENCIMIENTO")
+<<<<<<< HEAD
     @JsonProperty("fechavencimiento")
     private LocalDateTime fechaVencimiento;
 
@@ -63,4 +84,9 @@ public class TBL_USUARIOS_PLANES {
     @OneToOne(mappedBy = "usuarioPlanesNumRegistro", cascade = CascadeType.ALL)
     private TBL_HISTORIAL_PAGOS historialpagos;
 
+=======
+    @JsonProperty("fechaVencimiento")
+    private LocalDateTime fechaVencimiento;
+    
+>>>>>>> c887a3b99722b504a7c804ac5504fc2f91c047ce
 }
