@@ -8,6 +8,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -29,18 +30,20 @@ public class TBL_UBICACIONES {
     @Column(name = "TIPO")
     private String tipo;
 
-
-    //codigo lugar padre
-
+    // codigo lugar padre
     // relacion con la misma tabla (recusrsiva )
+    @OneToMany
+    @JoinColumn(name = "CODIGO_LUAGAR_PADRE", referencedColumnName = "CODIGO_UBICACION")
+    private TBL_UBICACIONES lugarPadre;
+
     /*****************************************************/
     // relacion de uno a muchos con la tabla personas
     @OneToMany(mappedBy = "ubicacion", cascade = CascadeType.ALL)
     private List<TBL_PERSONAS> personas;
 
-
     /********************************************/
-    //relacion de muchos a muchos con la tabla contenido (tbl intermedia contenido_paises)
-    @ManyToMany(mappedBy="listaUbicaciones",cascade= CascadeType.ALL)
+    // relacion de muchos a muchos con la tabla contenido (tbl intermedia
+    // contenido_paises)
+    @ManyToMany(mappedBy = "listaUbicaciones", cascade = CascadeType.ALL)
     private List<TBL_CONTENIDO> listaContenidoPorUbicacion;
 }

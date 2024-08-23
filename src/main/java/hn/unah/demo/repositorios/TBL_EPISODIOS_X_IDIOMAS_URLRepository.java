@@ -7,6 +7,5 @@ import jakarta.persistence.Entity;
 
 @Entity
 
-
-public interface TBL_EPISODIO_X_IDIOMAS_URLRepository extends JpaRepository<TBL_EPISODIOS_X_IDIOMAS_URL, Long> {
+public interface TBL_EPISODIOS_X_IDIOMAS_URLRepository extends JpaRepository<TBL_EPISODIOS_X_IDIOMAS_URL, Long> {
 }

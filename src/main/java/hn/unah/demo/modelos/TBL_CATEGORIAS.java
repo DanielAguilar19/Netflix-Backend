@@ -28,7 +28,7 @@ public class TBL_CATEGORIAS {
     private String nombreCategoria;
 
     @ManyToMany
-    @JoinTable(name = "TBL_CONTENIDO_X_CATEGORIA", joinColumns = @JoinColumn(name = "CODIGO_CATEGORIA", referencedColumnName = "CODIGO_CATEGORIA"), inverseJoinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"))
+    @JoinTable(name = "TBL_CONTENIDO_X_CATEGORIAS", joinColumns = @JoinColumn(name = "CODIGO_CATEGORIA", referencedColumnName = "CODIGO_CATEGORIA"), inverseJoinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"))
     private List<TBL_CONTENIDO> listaContenido;
 
 }

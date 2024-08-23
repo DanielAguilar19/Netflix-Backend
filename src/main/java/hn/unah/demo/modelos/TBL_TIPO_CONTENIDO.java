@@ -2,8 +2,6 @@ package hn.unah.demo.modelos;
 
 import java.util.List;
 
-import javax.print.DocFlavor.STRING;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -22,13 +22,10 @@ public class TBL_PELICULAS_X_IDIOMAS_URL {
   @Column(name = "URL_VIDEO")
   private String urlVideo;
 
-  // idioma
-  @Column(name = "CODIGO_IDIOMA")
+  @Column(name = "CODIGO_IDIOMA") // FK
   private Long codigoIdioma;
 
-  @Column(name = "CODIGO_PELICULA")
+  @Column(name = "CODIGO_PELICULA") // FK
   private long codigoPelicula;
-
-  // pelicula
 
 }

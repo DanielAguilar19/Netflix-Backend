@@ -6,7 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.Id;
 import lombok.Data;
 
 @Entity
@@ -15,15 +14,16 @@ import lombok.Data;
 
 public class TBL_REPARTO_X_CONTENIDO {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CODIGO_REGISTRO_RC")
     private Long codigoRepartoContenido;
 
-    @Column(name = "CODIGO_REPARTO") //FK
+    @Column(name = "CODIGO_REPARTO") // FK
     private TBL_REPARTO reparto;
 
-    //cambiar en la base de datos por codigo_contenido
+    // cambiar en la base de datos por codigo_contenido
 
-    @Column(name = "CODIGO_CONTENIDO")  //FK
+    @Column(name = "CODIGO_CONTENIDO") // FK
     private TBL_CONTENIDO contenido;
 
 }

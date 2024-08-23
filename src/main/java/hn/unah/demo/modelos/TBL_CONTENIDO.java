@@ -59,7 +59,7 @@ public class TBL_CONTENIDO {
     ////////////////////////////////////////////////
     // relacion de muchos a muchos con tbl ubicacinoes
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "TBL_CONTENIDO_PAISES", joinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_PLAN", referencedColumnName = "CODIGO_PLAN"))
+    @JoinTable(name = "TBL_CONTENIDO_PAISES", joinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_UBICACION", referencedColumnName = "CODIGO_UBICACION"))
     private List<TBL_UBICACIONES> listaUbicaciones;
 
     ////////////////////////////////////////////////
@@ -85,7 +85,7 @@ public class TBL_CONTENIDO {
     // relacion de muchos a muchos con la tabla de reparto (tbl intermedia
     // reparto_cotenido)
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "TBL_REPARTO_CONTENIDO", joinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_REPARTO", referencedColumnName = "CODIGO_REPARTO"))
+    @JoinTable(name = "TBL_REPARTO_X_CONTENIDO", joinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_REPARTO", referencedColumnName = "CODIGO_REPARTO"))
     private List<TBL_REPARTO> listaReparto;
 
     /**********************************************/

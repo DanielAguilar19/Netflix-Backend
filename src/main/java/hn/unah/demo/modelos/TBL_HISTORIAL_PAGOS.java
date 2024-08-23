@@ -13,6 +13,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -43,4 +44,10 @@ public class TBL_HISTORIAL_PAGOS {
     @ManyToOne
     @JoinColumn(name = "CODIGO_TIPO_PAGO", referencedColumnName = "CODIGO_TIPO_PAGO")
     private TBL_TIPO_PAGO codigoTipoPago;
+
+    /////////////////////////////////////////////////////
+    // relaicon de uno a uno con la tabla de historial_usuarios_x_plan
+    @OneToOne
+    @JoinColumn(name = "CODIGO_REGISTRO", referencedColumnName = "CODIGO_REGISTRO") // revisar la tabla
+    private TBL_HISTORIAL_USUARIOS_X_PLAN usuarioPlanesNumRegistro;
 }
