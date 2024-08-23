@@ -27,7 +27,7 @@ public class TBL_SUELDOS {
 
     /********************************************/
     // relacion de de uno a muchos con la tabla de contratos
-    @OneToMany(mappedBy = "", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "sueldo", cascade = CascadeType.ALL)
     private List<TBL_CONTRATOS> listaContratosPorTipoSueldo;
 
 }

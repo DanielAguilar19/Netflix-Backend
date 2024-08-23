@@ -33,9 +33,6 @@ public class TBL_EPISODIOS {
     @Column(name = "FECHA_LANZAMIENTO")
     private LocalDate fechaLanzamiento;
 
-    @ManyToMany(mappedBy = "listaEpisodios", cascade = CascadeType.ALL)
-    private List<TBL_SERIES> listaSeries;
-
     ////////////////////////////////////////
     // relacion de muchos a mcuhos con la tabla idios (tbl intermedia
     //////////////////////////////////////// episodios_idiomas)
@@ -43,5 +40,9 @@ public class TBL_EPISODIOS {
     @JoinTable(name = "TBL_EPISODIOS_X_IDIOMAS_URL", joinColumns = @JoinColumn(name = "CODIGO_EPISODIO", referencedColumnName = "CODIGO_EPISODIO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_IDIOMA", referencedColumnName = "CODIGO_IDIOMA"))
     private List<TBL_IDIOMAS> listasIdiomasPorEpisodios;
 
-    // falta relacion con tabla EPISODIOS_IDIOMAS_URL
+    /*************************************/
+    // relacion de muchos a muchos con series (tbl intermedi episodios_x_temporad)
+    @ManyToMany(mappedBy = "listaEpisodios", cascade = CascadeType.ALL)
+    private List<TBL_SERIES> listaSeries;
+
 }

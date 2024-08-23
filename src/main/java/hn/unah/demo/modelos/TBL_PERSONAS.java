@@ -52,10 +52,10 @@ public class TBL_PERSONAS {
     @JsonProperty("fecharegistro")
     private LocalDateTime fechaRegistro;
 
-    ///////////////////////////////////////////////////////
+    /***************************************************/
     // relacino de uno a uno con la tabla de USUARIOS
     @OneToOne(mappedBy = "persona", cascade = CascadeType.ALL)
-    private TBL_USUARIOS Usuario;
+    private TBL_USUARIOS usuario;
 
     /****************************************************/
     // relacion de muchos a uno con la tabla ubicaciones
