@@ -1,10 +1,16 @@
 package hn.unah.demo.modelos;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -14,9 +20,9 @@ import lombok.Data;
 
 public class TBL_PERMISOS {
 
-     @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_PERMISO")
+    @Column(name = "CODIGO_PERMISO")
     private Long idPermiso;
 
     @Column(name = "NOMBRE_PERMISO")
@@ -24,5 +30,9 @@ public class TBL_PERMISOS {
 
     @Column(name = "DESCRIPCION")
     private String descripcion;
-    
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "listaPermisos", cascade = CascadeType.ALL)
+    private List<TBL_ROLLES> listaRoles; // son los roles a lo que esta permos estan asociados
+
 }

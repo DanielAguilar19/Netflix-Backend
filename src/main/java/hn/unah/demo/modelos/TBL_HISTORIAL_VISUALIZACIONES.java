@@ -13,7 +13,6 @@ import jakarta.persistence.Id;
 
 public class TBL_HISTORIAL_VISUALIZACIONES {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_HISTORIAL")
@@ -24,7 +23,12 @@ public class TBL_HISTORIAL_VISUALIZACIONES {
     @JsonProperty("fechaVisualizacion")
     private LocalDateTime fechaVisulizacion;
 
-    @Column(name= "PROGRESO")
-    private Double progreso;
-    
+    @Column(name = "PROGRESO")
+    private String progreso;
+
+    /**********************************************/
+    private Long ID_CONTENIDO;
+
+    private Long CODIGO_PERFIL;
+
 }

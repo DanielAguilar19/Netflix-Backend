@@ -91,7 +91,7 @@ CREATE TABLE system.usuarios (
     p_apellido VARCHAR2(100) NOT NULL,
     s_apellido VARCHAR2(100),
     email VARCHAR2(100) NOT NULL,
-    contraseña VARCHAR2(255) NOT NULL,
+    contrasenia VARCHAR2(255) NOT NULL,
     fecha_registro DATE NOT NULL,
     id_rol NUMBER,
     id_plan NUMBER,

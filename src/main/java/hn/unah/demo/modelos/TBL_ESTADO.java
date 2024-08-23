@@ -13,21 +13,21 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "TBL_CARGOS")
+@Table(name = "TBL_ESTADO")
 @Data
-public class TBL_CARGOS {
+public class TBL_ESTADO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "CODIGO_CARGO")
-    private long codigoCargo;
+    @Column(name = "CODIGO_ESTADO")
+    private long codigoEstado;
 
-    @Column(name = "NOMBRE_CARGO")
-    private String nombreCargo;
+    @Column(name = "TIPO_ESTADO")
+    private String tipoEstado;
 
-    /********************************************/
-    // relacion de uno a muchos con la tabla contratos
-    @OneToMany(mappedBy = "cargo", cascade = CascadeType.ALL)
-    private List<TBL_CONTRATOS> listaContratosPorCargo;
+    /***************************************/
+    // relacion de uno a muchos con la tabla de usuarios_planes
+    @OneToMany(mappedBy = "estado", cascade = CascadeType.ALL)
+    private List<TBL_USUARIOS_PLANES> listaUsuariosPlan;
 
 }

@@ -9,19 +9,21 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "TBL_CONTENIDO_IDIOMA")
+@Table(name = "TBL_EPISODIOS_IDIOMAS_URL")
 @Data
-public class TBL_CONTENIDO_IDIOMA {
+public class TBL_EPISODIOS_IDIOMAS_URL {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CODIGO_REGISTRO")
     private long codigoRegistro;
 
-    @Column(name = "CODIGO_IDIOMA") // FK esta es una tabla intermedia entre conetenido y idiomas
+    @Column(name = "URL_VIDEO")
+    private String url_video;
+
+    @Column(name = "CODIGO_EPISODIO")
+    private Long codigoEpisodio;
+
+    @Column(name = "CODIGO_IDIOMA")
     private long codigoIdioma;
-
-    @Column(name = "CODIGO_CONTENIDO")
-    private long codigoContenido;
-
 }

@@ -1,12 +1,15 @@
 package hn.unah.demo.modelos;
 
-
+import java.util.List;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.JoinColumn;
 import lombok.Data;
 
 @Entity
@@ -15,10 +18,10 @@ import lombok.Data;
 
 public class TBL_ESTUDIOS {
 
-     @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_ESTUDIO")
-    private Long idEstudio;
+    @Column(name = "CODIGO_ESTUDIO")
+    private Long codigoEstudio;
 
     @Column(name = "NOMBRE")
     private String nombre;
@@ -29,7 +32,11 @@ public class TBL_ESTUDIOS {
     @Column(name = "DESCRIPCION")
     private String descripcion;
 
+    //////////////////////////////////////////////////////
+    // relacion de muchos a muchos con tbl contenido (tbl intermedia
+    // contenido_estudios)
+    @ManyToMany
+    @JoinTable(name = "CONTENIDO_ESTUDIOS", joinColumns = @JoinColumn(name = "CODIGO_ESTUDIO", referencedColumnName = "CODIGO_ESTUDIO"), inverseJoinColumns = @JoinColumn(name = "CODIGO_CONTENIDO", referencedColumnName = "CODIGO_CONTENIDO"))
+    private List<TBL_CONTENIDO> listaContenidoPorEstudio;
 
-    //no tiene relacion
-    
 }

@@ -1,16 +1,25 @@
 package hn.unah.demo.modelos;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.hibernate.annotations.CreationTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -24,28 +33,30 @@ public class TBL_USUARIOS {
     @Column(name = "ID_USUARIO")
     private Long idUsuario;
 
-    @Column(name = "P_NOMBRE")
-    private String primerNombre;
-
-    @Column(name = "S_NOMBRE")
-    private String segundoNombre;
-
-    @Column(name = "P_APELLIDO")
-    private String primerApellido;
-
-    @Column(name = "S_APELLIDO")
-    private String segundoApellido;
-
-    @Column(name = "EMAIL")
-    private String email;
-
     @Column(name = "CONTRASENIA")
     private String contrasenia;
 
-    @CreationTimestamp
-    @Column(name = "FECHA_REGISTRO")
-    @JsonProperty("fecharegistro")
-    private LocalDateTime fechaRegistro;
+    ///////////////////////////////////////////////
+    // relacion de uno a uno con la tabla de personas
+    @OneToOne
+    @JoinColumn(name = "CODIGO_PERSONA", referencedColumnName = "CODIGO_PERSONA")
+    private TBL_PERSONAS persona;
+
+    ////////////////////////////////////////////////
+    //// relacion de muchoa a uno con la tabla de planes
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "TBL_USUARIOS_PLANES", joinColumns = @JoinColumn(name = "ID_USUARIOS", referencedColumnName = "ID_USUARIO"), inverseJoinColumns = @JoinColumn(name = "ID_PLAN", referencedColumnName = "ID_PLAN"))
+    private List<TBL_PLANES_SUBSCRIPCION> listaPlanesSubscripcion;
+
+    /********************************************/
+    // relacion de uno a muchos con Tarjestas_usuario
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private List<TBL_USUARIOS_TARJETAS> listaTarjetasUsuario;
+
+    /*******************************************/
+    // relacion de uno amuchos con la talba perfiles
+    @OneToMany(mappedBy = "usuarios", cascade = CascadeType.ALL)
+    private List<TBL_PERFILES> listaPerfiles;
 
     // relacion con la tabal de roles
     // relacion con la tabla de pan
