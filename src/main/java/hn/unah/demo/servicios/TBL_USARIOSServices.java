@@ -91,8 +91,8 @@ public class TBL_USARIOSServices {
 
                 // ¿que plan eligio?, aqui registramos su adquision
                 // ***TBL_HISTORIAL_USUARIOS_X_PLAN nvoRegistroAdquisicionPlan = */
-                this.tbl_HISTORIAL_USUARIOS_X_PLANService.crearNvoRegistroDeAdquisicion(
-                        nvaPersona.getUsuario().getCodigoUsuario(), codigoTipoPlan, tarjetas.getCodigoRegistroTarjeta(),
+                this.tbl_HISTORIAL_USUARIOS_X_PLANService.crearNvoRegistroDeAdquisicionPlan(
+                        nvaPersona.getUsuario().getCodigoUsuario(), codigoTipoPlan, tarjetas,
                         codigoTipoPago);
 
             }
