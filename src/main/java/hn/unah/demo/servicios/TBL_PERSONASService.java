@@ -20,7 +20,7 @@ public class TBL_PERSONASService {
     private TBL_USUARIOSRepository tblUsuariosRepository;
 
     // metodo para crear un usuario partiendo de la jerarquia
-    public TBL_PERSONAS crearNueva(TBL_PERSONAS nvaPersona, String contrasenia) {
+    public TBL_PERSONAS crearNuevaPersona(TBL_PERSONAS nvaPersona, String contrasenia) {
 
         if (!this.tblPersonasRepository.existdByEmail(nvaPersona.getEmail())) {
 

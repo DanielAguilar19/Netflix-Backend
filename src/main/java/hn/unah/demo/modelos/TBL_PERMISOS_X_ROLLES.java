@@ -10,14 +10,16 @@ import lombok.Data;
 @Entity
 @Table(name = "TBL_PERMISOS_X_ROLLES")
 @Data
-@IdClass(TBL_PERMISOS_X_ROLLES.class)
+
 public class TBL_PERMISOS_X_ROLLES {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long codigo;
+
     @Column(name = "CODIGO_PERMISO") // FK // esta es una tabla intermedia entre tbl rolles y tbl permisos
     private long codigoPermiso;
 
-    @Id
     @Column(name = "CODIGO_ROL") // FK
     private long codigoRoll;
 

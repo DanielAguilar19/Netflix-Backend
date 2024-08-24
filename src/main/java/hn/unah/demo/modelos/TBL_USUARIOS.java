@@ -25,7 +25,7 @@ public class TBL_USUARIOS {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CODIGO_USUARIO")
-    private Long idUsuario;
+    private Long codigoUsuario;
 
     @Column(name = "CORREO")
     private String correo;

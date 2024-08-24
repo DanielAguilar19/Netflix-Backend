@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "TBL_CONTENIDO_X_IDIOMA") //CAMBIAR EN LA BASE DE DATOS; AHI SALE COMO CONTENDIO
+@Table(name = "TBL_CONTENIDO_X_IDIOMA") // CAMBIAR EN LA BASE DE DATOS; AHI SALE COMO CONTENDIO
 @Data
 public class TBL_CONTENIDO_X_IDIOMA {
 
@@ -21,7 +21,7 @@ public class TBL_CONTENIDO_X_IDIOMA {
     @Column(name = "CODIGO_IDIOMA") // FK esta es una tabla intermedia entre conetenido y idiomas
     private long codigoIdioma;
 
-    @Column(name = "CODIGO_CONTENIDO") //FK
+    @Column(name = "CODIGO_CONTENIDO") // FK
     private long codigoContenido;
 
 }

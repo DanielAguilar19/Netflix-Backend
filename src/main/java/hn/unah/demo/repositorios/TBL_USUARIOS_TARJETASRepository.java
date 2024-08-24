@@ -7,7 +7,8 @@ import hn.unah.demo.modelos.TBL_USUARIOS_TARJETAS;
 
 @Repository
 
-
 public interface TBL_USUARIOS_TARJETASRepository extends JpaRepository<TBL_USUARIOS_TARJETAS, Long> {
-    
+
+    public boolean existsByNumeroTarjeta(String numeroTarjeta);
+
 }
