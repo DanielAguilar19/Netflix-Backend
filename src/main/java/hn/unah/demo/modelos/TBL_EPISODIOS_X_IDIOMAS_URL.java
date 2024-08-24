@@ -14,8 +14,7 @@ import lombok.Data;
 
 public class TBL_EPISODIOS_X_IDIOMAS_URL {
 
-    
-         @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CODIGO_REGISTRO_EI")
     private Long codigoRegistro;
@@ -23,15 +22,14 @@ public class TBL_EPISODIOS_X_IDIOMAS_URL {
     @Column(name = "URL_VIDEO")
     private String urlVideo;
 
-
-    @Column(name = "CODIGO_EPISODIO") //FK
+    @Column(name = "CODIGO_EPISODIO") // FK
     private Long codigoEpisodio;
 
-    @Column(name = "CODIGO_IDIOMA") //FK
+    @Column(name = "CODIGO_IDIOMA") // FK
     private long codigoIdioma;
 
-    //episodio
+    // episodio
 
-    //idioma
-    
+    // idioma
+
 }

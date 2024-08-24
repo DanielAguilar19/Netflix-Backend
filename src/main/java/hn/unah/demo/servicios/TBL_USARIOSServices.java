@@ -26,15 +26,20 @@ public class TBL_USARIOSServices {
     // metodo para editar campos de un usuario
     public TBL_USUARIOS editarUsuario(long codigoUsuario, TBL_USUARIOS nvoUsuarioEditado) {
 
-        // TBL_USUARIOS objUsuario = this.tblusuar
+        if (this.tblusuariorepository.existsById(codigoUsuario)) {
+
+            TBL_USUARIOS objUsuario = this.tblusuariorepository.findById(codigoUsuario).get();
+            return null;
+        }
+
         return null;
     }
 
-    public boolean validarUsuario(String correo, String contrasenia){
+    public boolean validarUsuario(String correo, String contrasenia) {
         TBL_USUARIOS usuarioLoguear = this.tblusuariorepository.validarContraseniaCorreo(correo, contrasenia);
         if (usuarioLoguear != null) {
             return true;
         }
-            return false;
-    }       
+        return false;
+    }
 }

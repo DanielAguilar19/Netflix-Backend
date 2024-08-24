@@ -20,7 +20,7 @@ public class TBL_TIPO_PLANES_SUBSCRIPCION {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_PLAN")
+    @Column(name = "CODIGO_PLAN")
     private Long idPlan;
 
     @Column(name = "NOMBE_PLAN")
@@ -51,7 +51,7 @@ public class TBL_TIPO_PLANES_SUBSCRIPCION {
     // unn plan
 
     @JsonIgnore
-    @ManyToMany(mappedBy = " listaPlanesSubscripcion", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "listaPlanesSubscripcion", cascade = CascadeType.ALL)
     private List<TBL_USUARIOS> listaUsuarios;
 
 }

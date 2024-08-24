@@ -11,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -32,7 +33,9 @@ public class TBL_UBICACIONES {
 
     // codigo lugar padre
     // relacion con la misma tabla (recusrsiva )
-    @OneToMany
+    // cambie de @one to many
+
+    @OneToOne
     @JoinColumn(name = "CODIGO_LUAGAR_PADRE", referencedColumnName = "CODIGO_UBICACION")
     private TBL_UBICACIONES lugarPadre;
 

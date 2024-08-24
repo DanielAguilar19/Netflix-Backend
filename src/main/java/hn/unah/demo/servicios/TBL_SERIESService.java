@@ -11,5 +11,5 @@ public class TBL_SERIESService {
 
     @Autowired
     private TBL_SERIESRepository tbl_SERIESRepository;
-    
+
 }

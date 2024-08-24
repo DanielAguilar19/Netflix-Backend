@@ -29,6 +29,6 @@ public class TBL_ACTORES {
     private LocalDate fechaNacimiento;
 
     @ManyToMany(mappedBy = "listaActores", cascade = CascadeType.ALL)
-    private List<TBL_CONTENIDO_X_ACTORES> listaContenidoActores;
+    private List<TBL_CONTENIDO> listaContenidoActores;
 
 }

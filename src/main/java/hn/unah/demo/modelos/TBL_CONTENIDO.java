@@ -2,7 +2,6 @@ package hn.unah.demo.modelos;
 
 import java.time.LocalDateTime;
 import java.util.List;
-
 import org.hibernate.annotations.CreationTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -54,7 +53,7 @@ public class TBL_CONTENIDO {
     /***********************************************/
     // relacion de uno a muchos con la tabla series
     @OneToMany(mappedBy = "contenido", cascade = CascadeType.ALL)
-    private List<TBL_SERIES> listaSeries;
+    private List<TBL_SERIES> listaSerie;
 
     ////////////////////////////////////////////////
     // relacion de muchos a muchos con tbl ubicacinoes
@@ -78,7 +77,7 @@ public class TBL_CONTENIDO {
     // relacion de muchos a muchos con tbl perfiles (tbl intermedia
     // historial_vizualizacion)
     @JsonIgnore
-    @ManyToMany(mappedBy = " listaContenidoPorPerfil", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "listaContenidoPorPerfil", cascade = CascadeType.ALL)
     private List<TBL_PERFILES> listaPerfiles;
 
     ////////////////////////////////////////////////

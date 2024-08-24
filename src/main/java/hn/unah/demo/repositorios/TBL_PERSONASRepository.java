@@ -9,4 +9,6 @@ import hn.unah.demo.modelos.TBL_PERSONAS;
 
 public interface TBL_PERSONASRepository extends JpaRepository<TBL_PERSONAS, Long> {
 
+    public boolean existdByEmail(String email);
+
 }

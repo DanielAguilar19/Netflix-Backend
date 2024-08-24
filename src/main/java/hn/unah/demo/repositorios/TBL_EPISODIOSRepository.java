@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import hn.unah.demo.modelos.TBL_EPISODIOS;
 
 @Repository
-public interface TBL_EPISODIOSRepository extends JpaRepository<TBL_EPISODIOS, Long>{
 
-    
+public interface TBL_EPISODIOSRepository extends JpaRepository<TBL_EPISODIOS, Long> {
+
 }
