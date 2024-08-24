@@ -38,6 +38,9 @@ public class TBL_TIPO_PLANES_SUBSCRIPCION {
     @Column(name = "RESOLUCION")
     private String resolucion;
 
+    @Column(name = "TIEMPO_ACCESOS")
+    private Integer timepoAcceso;
+
     /********************************************/
     // relacion de uno a muchos con la tabal de usuarios planes (un plan puede ser
     // basico , medio , premiun)(una subscripcion es la furacion por la ques se pago

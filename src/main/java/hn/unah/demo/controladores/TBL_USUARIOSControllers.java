@@ -26,6 +26,15 @@ public class TBL_USUARIOSControllers {
     @Autowired
     private TBL_PERSONASService tbl_PERSONASService;
 
+    // metodo para crear solamente el usuario
+    @PostMapping("/crear/usuario")
+    public TBL_USUARIOS crearRegistroUsuarioNuevo(@RequestBody TBL_PERSONAS nvapersona,
+            @RequestParam String contrasenia) {
+
+        return this.tbl_USARIOSServices.crearUsuario(nvapersona, contrasenia);
+
+    }
+
     @PostMapping("/crear/registroCompleto/{codigoTipoPlan}")
     public TBL_USUARIOS registroCompletoAccederPlataforma(@RequestBody TBL_PERSONAS nvapersona,
             @RequestParam String contrasenia, @RequestBody TBL_USUARIOS_TARJETAS tarjeta,

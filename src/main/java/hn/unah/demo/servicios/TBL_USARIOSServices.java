@@ -59,6 +59,21 @@ public class TBL_USARIOSServices {
         return false;
     }
 
+    // metodo para crear solamente el usuarios
+    public TBL_USUARIOS crearUsuario(TBL_PERSONAS nvaPersona, String contrasenia) {
+
+        if (nvaPersona != null) {
+            if (contrasenia != null) {
+                TBL_PERSONAS nvaPersonas = this.tbl_PERSONASService.crearNuevaPersona(nvaPersona, contrasenia);
+
+                return nvaPersonas.getUsuario();
+
+            }
+        }
+
+        return null;
+    }
+
     // metodo para crear usuario asociarle las acciones para elegir plan y pagar
     public TBL_USUARIOS nvoRegistroInfoRequisitosCompletos(TBL_PERSONAS nvaPersona, String contrasenia,
             TBL_USUARIOS_TARJETAS nvaTarjeta, long codigoTipoPlan, long codigoTipoPago) {
