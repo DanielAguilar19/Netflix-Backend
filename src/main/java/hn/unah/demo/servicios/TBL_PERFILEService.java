@@ -42,6 +42,7 @@ public class TBL_PERFILEService {
 
             TBL_USUARIOS objUsuario = this.tbl_usuariosRepository.findById(codigoUsuario).get();
             nvoPerfil.setUsuarios(objUsuario);
+            nvoPerfil.setIdiomas(nvoPerfil.getIdiomas());
             return this.tbl_PERFILESRepository.save(nvoPerfil);
 
         }
